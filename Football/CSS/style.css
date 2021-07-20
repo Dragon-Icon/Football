@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.playBtn{
+    position: relative;
+    width: 100%;
+    text-align: center;
+    top: 17rem;
+    display: flex;
+}
+
+.play,.pause,.left, .right, .right{
+    position: relative;
+    left: 35rem;
+}
+
+
+button{
+    position: relative;
+    background-image: linear-gradient(to right,navy, teal);
+    z-index: 1;
+    padding: 1rem;
+    border-radius: 20px;
+    border: 1px solid black;
+    font-size: 2rem;
+    cursor: pointer;
+    transition: transform 1s ease-in-out;
+    color: white;
+    margin-left: 1rem;
+}
+
+
+button::before{
+    position: absolute;
+    content: "";
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(to top, navy, teal);
+    z-index: -1;
+    transition: opacity 0.5s linear;
+    opacity: 0;
+    border-radius: 20px;
+}
+
+button:hover::before{
+    opacity: 1;
+}
+
+img{
+    position: fixed;
+    top: 10rem;
+    left: -260px;
+    border-radius: 10px;
+    box-shadow: 10px 10px 10px rgba(0,0,0,0.3);
+}
+
+.flagImg{
+    position: fixed;
+    left: 85.5rem;
+    top: 15rem;
+}
+
+.pause{
+    display: none;
+}
+
+h1{
+    font-family: poppins;
+    font-size: 4rem;
+    position: fixed;
+    top: 10rem;
+    left: 41.5rem;
+
+}
+
+@keyframes players{
+    0%,100%{
+        left: -260px;
+    }
+    50%{
+        left: 200px;
+    }
+}
+
+@keyframes flags{
+    0%,100%{
+        left: 85.5rem;
+    }
+    50%{
+        left: 57rem;
+    }
+}
